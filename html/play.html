@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>test</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>    
+	<script type="text/javascript" src="../js/ui.js"></script>    
+
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/lottie.css">
+	
+</head>
+
+
+<body>
+	<div class="wrap">
+		<!-- 상단 가로 스크롤 -->
+		<div class="xscroll">
+			<div class="scroll"></div>
+		</div>
+		<!-- 상단 가로 스크롤 -->
+		<!-- 토스트 팝업  -->
+		<div>
+			<a class="btn" href="javascript:;" onclick="toast_sample1();">누르면 토스트</a>
+		</div>
+		<!-- 토스트 팝업  -->
+		
+		<!-- 탭 메뉴 -->
+		<div class="tab-area">
+			<ul>
+				<li class="active">
+					<a href="javascript:;">메뉴 1</a>
+				</li>
+				<li>
+					<a href="javascript:;">메뉴 2</a>
+				</li>
+				<li>
+					<a href="javascript:;">메뉴 3</a>
+				</li>
+			</ul>
+			<div class="content">
+				<div style="padding: 20px; background-color: #fff;">
+					<!-- 탭 메뉴 -->
+					<div class="tab-area t2">
+						<ul>
+							<li class="active">
+								<a href="javascript:;">메뉴 1</a>
+							</li>
+							<li>
+								<a href="javascript:;">메뉴 2</a>
+							</li>
+							<li>
+								<a href="javascript:;">메뉴 3</a>
+							</li>
+						</ul>
+						<div class="content">
+							<div>내용 1</div>
+							<div>내용 2</div>
+							<div>내용 3</div>
+						</div>
+					</div>
+					<!-- 탭 메뉴 -->
+				</div>
+				<div>내용 2</div>
+				<div>내용 3</div>
+			</div>
+		</div>
+		<!-- 탭 메뉴 -->
+		<!-- 탭 메뉴 -->
+		<div class="tab-area">
+			<ul>
+				<li class="active">
+					<a href="javascript:;">메뉴 1</a>
+				</li>
+				<li>
+					<a href="javascript:;">메뉴 2</a>
+				</li>
+				<li>
+					<a href="javascript:;">메뉴 3</a>
+				</li>
+			</ul>
+			<div class="content">
+				<div>내용 1</div>
+				<div>내용 2</div>
+				<div>내용 3</div>
+			</div>
+		</div>
+		<!-- 탭 메뉴 -->
+
+
+		<!-- 아코디언 -->
+		<div class="accordion" data-accordion="accordion">
+			<ul>
+				<li>
+					<div class="tit">아코디언</div>
+					<div class="item">본문 내용</div>
+				</li>
+				<li>
+					<div class="tit">아코디언</div>
+					<div class="item">본문 내용</div>
+				</li>
+				<li>
+					<div class="tit">아코디언</div>
+					<div class="item">본문 내용</div>
+				</li>
+			</ul>
+		</div>
+		<!-- 아코디언 -->
+
+		<!-- lottie json Animation -->
+		<div id="lottie1"></div>
+		<!-- lottie json Animation -->
+
+
+		<div style="height: 1100px">
+			<div style="padding-top: 30px;">
+				<button onclick="ui.로딩.show()">로딩</button>
+				<button onclick="ui.로딩.hide()" style="z-index: 2001; position: relative">종료</button>
+			</div>
+			<div class="alert" style="margin-top: 30px">
+				<button  onclick="alter();">알럿창</button>
+			</div>
+
+			<div class="ui-select" style="margin-top: 340px">
+				<button class="open">클릭하면 셀렉트 위아래 위치 잡기</button>
+				<div class="item">
+					<ul>
+						<li>아이템 1</li>
+						<li>아이템 2</li>
+						<li>아이템 3</li>
+					</ul>
+				</div>
+			</div>
+
+<!-- 
+			<div style="margin-top: 200px">
+				<select name="select-2">
+					<option>선택 하세요</option>
+					<option selected>선택1</option>
+					<option>선택2</option>
+					<option>선택3</option>
+				</select>
+			</div> -->
+		</div>
+
+
+	</div>
+	
+	<div class="quick">
+		<button>▲</button>
+	</div>
+	<script>
+		let alter = function(){
+			ui.알럿("알럿 창입니다", {
+				ycb : function(){
+					console.log("알럿 확인");
+					ui.알럿('asdfasdf알럿 22222');
+				},
+				ncb:function(){
+					console.log("컨펌 취소");
+				},
+				ybt:"확인",
+				nbt:"취소",
+			});
+		};
+
+		let toast_sample1 = function(){
+			ui.토스트팝업("UI 토스트 팝업", {});
+		};
+
+	</script>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.13.0/bodymovin.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+</body>
+</html>

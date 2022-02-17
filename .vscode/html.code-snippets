@@ -1,0 +1,321 @@
+{
+	// Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	";a": {
+		"prefix": "a",
+		"body": [
+			"<a href=\"${1:javascript:;}\">$2</a>"
+		],
+		"description": "A"
+	},
+	";<<": {
+		"prefix": "<<",
+		"body": [
+			"&lt;"
+		],
+		"description": "<<"
+	},
+	";>>": {
+		"prefix": ">>",
+		"body": [
+			"&gt;"
+		],
+		"description": ">>"
+	},
+	";javascript:;": {
+		"prefix": "javascript:;",
+		"body": [
+			"javascript:;"
+		],
+		"description": "javascript:;"
+	},
+	";table list": {
+		"prefix": ";table 리스트",
+		"body": [
+			"<table class=\"tblist a$1\" cellpadding=\"0\" cellspacing=\"0\">",
+			"    <caption>$2</caption>",
+			"    <colgroup>",
+			"        <col$3>",
+			"        <col>",
+			"    </colgroup>",
+			"    <thead>",
+			"        <tr>",
+			"            <th scope=\"col\">${4:TH}</th>",
+			"            <th scope=\"col\">TH</th>",
+			"            <th scope=\"col\">TH</th>",
+			"            <th scope=\"col\">TH</th>",
+			"        </tr>",
+			"    </thead>",
+			"    <tbody>",
+			"        <tr>",
+			"            <td>${5:TD}</td>",
+			"            <td>TD</td>",
+			"            <td>TD</td>",
+			"            <td>TD</td>",
+			"        </tr>",
+			"    </tbody>",
+			"</table>"
+		],
+		"description": "리스트형"
+	},
+
+	";table form": {
+		"prefix": ";table 폼",
+		"body": [
+			"<table class=\"tbform a$1\" cellpadding=\"0\" cellspacing=\"0\">",
+			"    <caption>$2</caption>",
+			"    <colgroup>",
+			"        <col$3>",
+			"        <col>",
+			"    </colgroup>",
+			"    <tbody>",
+			"        <tr>",
+			"            <th scope=\"row\">${4:TH}</th>",
+			"            <td>${5:TD}</td>",
+			"        </tr>",
+			"        <tr>",
+			"            <th scope=\"row\">${6:TH}</th>",
+			"            <td>${7:TD}</td>",
+			"        </tr>",
+			"    </tbody>",
+			"</table>"
+		],
+		"description": "폼형"
+	},
+	";won": {
+		"prefix": "원",
+		"body": [
+			"₩"
+		],
+		"description": "₩"
+	},
+	";btn a": {
+		"prefix": ";btn.a",
+		"body": [
+			"<a href=\"javascript:;\" class=\"btn $1\">${2:버튼}</a>"
+		],
+		"description": ".btn 버튼"
+	},
+	";btn button": {
+		"prefix": ";btn button",
+		"body": [
+			"<button type=\"button\" class=\"btn $1\">${2:버튼}</button>"
+		],
+		"description": ".button 버튼"
+	},
+	";btn attach": {
+		"prefix": ";btn attach",
+		"body": [
+			"<label class=\"bt btn-attach show\">",
+			"    <em class=\"btx\">등록하기</em>",
+			"    <input class=\"file\" type=\"file\" accept=\"image/*; capture=camera\">",
+			"</label>"
+		],
+		"description": ".button 첨부파일"
+	},
+	";checkbox": {
+		"prefix": ";checkbox",
+		"body": [
+			"<label class=\"checkbox\"><input type=\"checkbox\"><span class=\"txt\">${1:첵크박스}</span></label>"
+		],
+		"description": ".checkbox 첵크박스"
+	},
+	";radio": {
+		"prefix": ";radio",
+		"body": [
+			"<label class=\"radio\"><input type=\"radio\" name=\"radio1\"><span class=\"txt\">${1:라디오}</span></label>"
+		],
+		"description": ".radio 라디오버튼"
+	},
+
+	";input_text": {
+		"prefix": ";input_text",
+		"body": [
+			"<span class=\"input a\"><label class=\"lb\" for=\"${1:input_id0}\">타이틀</label><input id=\"${1:input_id0}\" type=\"text\" placeholder=\"내용을 입력하세요.\"></span>"
+		],
+		"description": ".input 택스트"
+	},
+	";input_rsnum": {
+		"prefix": ";input_rsnum",
+		"body": [
+			"<span class=\"input a ut-rsnum\">",
+			"    <label class=\"lb\" for=\"${1:rsnum_0}\">주민등록번호 및 외국인등록번호</label>",
+			"    <input id=\"${1:rsnum_0}\" type=\"tel\" class=\"fn\" pattern=\"\\d*\" title=\"앞 6자리\" placeholder=\"앞 6자리\">",
+			"    <input type=\"tel\" class=\"ln\" pattern=\"\\d*\" title=\"뒤 7자리\" placeholder=\"뒤 7자리\">",
+			"</span>"
+		],
+		"description": ".input 주민등록번호"
+	},
+	";input_phone": {
+		"prefix": ";input_phone",
+		"body": [
+			"<div class=\"ut-phone\">",
+			"    <span class=\"select tcom\">",
+			"        <label for=\"${1:tcom_0}\" class=\"lb\">통신사</label>",
+			"        <select id=\"${1:tcom_0}\">",
+			"            <option>SKT</option>",
+			"            <option>KT</option>",
+			"            <option>LGU+</option>",
+			"            <option>SKT알뜰폰</option>",
+			"            <option>KT알뜰폰</option>",
+			"            <option>LGU+알뜰폰</option>",
+			"        </select>",
+			"    </span>",
+			"    <span class=\"input a tnum\"><label class=\"lb\">전화번호입력</label>",
+			"        <input type=\"tel\" pattern=\"\\d*\" placeholder=\"[-] 없이 입력해주세요\">",
+			"    </span>",
+			"</div>"
+		],
+		"description": ".input 폰번호"
+	},
+	";input_number": {
+		"prefix": ";input_number",
+		"body": [
+			"<span class=\"input a\"><label class=\"lb\" for=\"${1:input_id_}\">타이틀</label><input id=\"${1:input_id_}\" type=\"tel\" pattern=\"\\d*\" placeholder=\"내용을 입력하세요.\"></span>"
+		],
+		"description": ".input 숫자"
+	},
+	";input_won": {
+		"prefix": ";input_won",
+		"body": [
+			"<span class=\"input won a\"><label class=\"lb\" for=\"${1:input_id_}\">타이틀</label><input id=\"${1:input_id_}\" type=\"tel\" placeholder=\"0\"><i class=\"w\">원</i></span>"
+		],
+		"description": ".input 원"
+	},
+	";input_file": {
+		"prefix": ";input_file",
+		"body": [
+			"<div class=\"btn-set\">",
+			"    <label class=\"btn btn-attach\">",
+			"        <em class=\"btx\">파일추가</em>",
+			"        <input class=\"file\" type=\"file\" accept=\"image/*; capture=camera\">",
+			"    </label>",
+			"</div>"
+		],
+		"description": ".input file"
+	},
+	";input_addrs": {
+		"prefix": ";input_addrs 주소입력",
+		"body": [
+			"<div class=\"ut-addrs\">",
+			"    <span class=\"input a adr1\"><label class=\"lb\" for=\"adr_id1\">자택주소<em class=\"ast\">*</em></label><input id=\"adr_id1\" type=\"text\" placeholder=\"주소를 입력해주세요\" readonly></span>",
+			"    <span class=\"input a adr2\"><label class=\"lb\" for=\"adr_id2\">나머지 주소</label><input id=\"adr_id2\" type=\"text\" placeholder=\"주소를 입력해주세요\"></span>",
+			"    <button type=\"button\" class=\"btn sm sch\">주소찾기</button>",
+			"</div>"
+		],
+		"description": ".input file"
+	},
+	";select": {
+		"prefix": ";select.a",
+		"body": [
+			"<span class=\"select a\">",
+			"    <label class=\"lb\" for=\"${1:sel_id0}\">${2:Label}</label>",
+			"    <select id=\"${1:sel_id0}\" name=\"${1:select_pop_}\">",
+			"        <option>${3:선택}</option>",
+			"    </select>",
+			"</span>"
+		],
+		"description": ".select-pop.a 셀렉트"
+	},
+	";input_date": {
+		"prefix": ";input_date",
+		"body": [
+			"<span class=\"input a ut-date\"><label class=\"lb\" for=\"${1:date_id_}\">Label</label><input type=\"text\" id=\"${1:date_id_}\" class=\"datepicker\" placeholder=\"YYYY-MM-DD\" value=\"2019-06-07\" readonly></span>"
+		],
+		"description": "ui-date-input 날짜입력칸"
+	},
+	";textarea": {
+		"prefix": ";textarea",
+		"body": [
+			"<div class=\"textarea a\">",
+			"    <label class=\"lb blind\" for=\"${1:tarea_id_}\">Label</label>",
+			"    <textarea id=\"${1:tarea_id_}\" placeholder=\"입력하세요\"></textarea>",
+			"    <span class=\"num\"><i class=\"i\">102</i>/<b class=\"n\">300</b></span>",
+			"</div>"
+		],
+		"description": ".textarea 텍스트입력"
+	},
+	";gap": {
+		"prefix": ";gap",
+		"body": [
+			"<p class=\"gap ${1:h30}\"></p>"
+		],
+		"description": ";gap"
+	},
+	";popup.a": {
+		"prefix": ";popup.a",
+		"body": [
+			"<article class=\"pop-layer a ${1:pop-sample2}\" id=\"${1:pop-sample2}\">",
+			"    <div class=\"pbd\">",
+			"        <div class=\"phd\">",
+			"            <div class=\"in\">",
+			"                <h1 class=\"ptit\">${2:팝업레이어 타이틀}</h1>",
+			"            </div>",
+			"        </div>",
+			"        <div class=\"pct\">",
+			"            <main class=\"poptents\">",
+			"            내용 내용.",
+			"            </main>",
+			"        </div>",
+			"        <div class=\"pbt\">",
+			"            <div class=\"bts\">",
+			"                <button type=\"button\" class=\"btn b rd lg\" onclick=\"ui.popup.close('${1:pop-sample2}');\">취소</button>",
+			"                <button type=\"button\" class=\"btn a rd lg\">다음</button>",
+			"            </div>",
+			"        </div>",
+			"        <button type=\"button\" class=\"btn-pop-close\">닫기</button>",
+			"    </div>",
+			"</article>",
+
+			"<script>",
+			"    ui.popup.open('${1:pop-sample2}');",
+			"</script>"
+		],
+		"description": "팝업레이어.pop-layer.a "
+	},	
+	";popup.c": {
+		"prefix": ";popup.c",
+		"body": [
+			"<article class=\"pop-layer c ${1:pop-sample2}\" id=\"${1:pop-sample2}\">",
+			"    <div class=\"pbd\">",
+			"        <div class=\"phd\">",
+			"            <div class=\"in\">",
+			"                <h1 class=\"ptit\">${2:팝업레이어 타이틀}</h1>",
+			"            </div>",
+			"        </div>",
+			"        <div class=\"pct\">",
+			"            <main class=\"poptents\">",
+			"                <p>내용 내용.</p>",
+			"                <p>내용 내용.</p>",
+			"                <p>내용 내용.</p>",
+			"                <p>내용 내용.</p>",
+			"                <p>내용 내용.</p>",
+			"                <p>내용 내용.</p>",
+			"                <div class=\"btn-set\">",
+			"                    <button type=\"button\" class=\"btn b rd lg\" onclick=\"ui.popup.close('${1:pop-sample2}');\">취소</button>",
+			"                    <button type=\"button\" class=\"btn a rd lg\">다음</button>",
+			"                </div>",
+			"            </main>",
+			"        </div>",
+			"        <button type=\"button\" class=\"btn-pop-close\">닫기</button>",
+			"    </div>",
+			"</article>",
+
+			"<script>",
+			"    ui.popup.open('${1:pop-sample2}');",
+			"</script>"
+		],
+		"description": "팝업레이어.pop-layer.c "
+	}	
+}

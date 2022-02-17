@@ -1,0 +1,163 @@
+{
+	// Place your snippets for css here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"fs": {
+		"prefix": "fs",
+		"body": [
+			"font-size:${1:14}rem;$2"
+		],
+		"description": "폰트사이즈"
+	},
+	"color": {
+		"prefix": "color:#555555",
+		"body": [
+			"color: #${1:555555};"
+		],
+		"description": "폰트칼라"
+	},
+	"color_1": {
+		"prefix": "color:#242424",
+		"body": [
+			"color: #${1:242424};"
+		],
+		"description": "폰트칼라"
+	},
+	"color_2": {
+		"prefix": "color:#4aa825",
+		"body": [
+			"color: #${1:4aa825};"
+		],
+		"description": "폰트녹색"
+	},
+	"color_3": {
+		"prefix": "color:#9b9fa8",
+		"body": [
+			"color: #${1:9b9fa8};"
+		],
+		"description": "폰트그래이"
+	},
+	"width": {
+		"prefix": "width",
+		"body": [
+			"width: $1;"
+		],
+		"description": "width"
+	},
+	"ellip1": {
+		"prefix": "ellip1",
+		"body": [
+			"text-overflow:ellipsis; overflow:hidden; white-space:nowrap;"
+		],
+		"description": "ellip1"
+	},
+	"ellips": {
+		"prefix": "ellips",
+		"body": [
+			"-webkit-line-clamp:${1:2}; max-height:${2:3}em; line-height:${3:1.5}em; -webkit-box-orient:vertical; display:-webkit-box; text-overflow:ellipsis; overflow:hidden; word-break:break-all;"
+		],
+		"description": "ellips"
+	},
+	"icons": {
+		"prefix": "icons",
+		"body": [
+			"width:$1; height:$1; background:url($2) no-repeat center; background-size:$1 auto; font-size:0rem; display:inline-block; vertical-align:middle; content:''; margin: 0rem 0rem 0rem 0rem"
+		],
+		"description": "icons"
+	},
+	"calc": {
+		"prefix": "calc",
+		"body": [
+			"calc($1);"
+		],
+		"description": "calc"
+	},
+	"env_b": {
+		"prefix": "env_b",
+		"body": [
+			"env(safe-area-inset-bottom)"
+		],
+		"description": "env"
+	},
+	"env_t": {
+		"prefix": "env_t",
+		"body": [
+			"env(safe-area-inset-top)"
+		],
+		"description": "env"
+	},
+	"content": {
+		"prefix": "content",
+		"body": [
+			"content:\"$1\";"
+		],
+		"description": "content"
+	},
+	"box-shadow": {
+		"prefix": "box-shadow",
+		"body": [
+			"box-shadow:rgba(0,0,0,0.1) 2rem 2rem 3rem;"
+		],
+		"description": "content"
+	},
+	"rgba": {
+		"prefix": "rgba",
+		"body": [
+			"rgba(${1:255},${1:255},${1:255},${2:0.1})"
+		],
+		"description": "rgba(255,255,255,0.1)"
+	},
+	"grad": {
+		"prefix": "rgba",
+		"body": [
+			"linear-gradient(0deg, rgba(255,119,119,1) 0%, rgba(255,56,56,1) 100%);"
+		],
+		"description": "grad"
+	},
+	"@import": {
+		"prefix": "@import",
+		"body": [
+			"@import url(\"$1\");"
+		],
+		"description": "@import url"
+	},
+	"@media max": {
+		"prefix": "@media max",
+		"body": [
+			"@media screen and ( max-width:${1:640}px) {",
+			"    $2",
+			"}"
+		],
+		"description": "@media max"
+	},
+	"@media min": {
+		"prefix": "@media min",
+		"body": [
+			"@media screen and ( min-width:${1:640}px) {",
+			"    $2",
+			"}"
+		],
+		"description": "@media min"
+	},
+	"@media max min": {
+		"prefix": "@media max min",
+		"body": [
+			"@media screen and ( max-width:${1:640}px ) and ( min-width:${2:320}px ) {",
+			"    $3",
+			"}"
+		],
+		"description": "@media max min"
+	},
+	
+	
+}

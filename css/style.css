@@ -1,0 +1,101 @@
+* {padding: 0; margin:0; text-decoration: none; color: #333; border:0; background: transparent; }
+button {background-color: #ccc; padding: 5px}
+
+
+.wrap {padding:30px 10px; box-sizing: border-box;}
+
+.btn {background-color: #4aa825; padding: 10px; display: inline-block; }
+
+/* 토스트 */		
+.pop-toast{position:fixed; left:0px; right:0px;transform: translateY(150%);bottom: 0px;transition: all 0.4s;opacity: 0;text-align:center;overflow-y:auto;z-index: 1000;outline:none;margin-bottom: calc(20px);margin-bottom: calc(20px + env(safe-area-inset-bottom));}
+.pop-toast.on{opacity: 1;transform: translateY(0);}
+.pop-toast>.pbd{color:#ffffff;padding: 0px 20px;}
+.pop-toast>.pbd>.pct{padding: 16px 16px 15px 16px;background-color: #4aa825;font-size: 14px;line-height: 19px;text-align:center;border-radius: 7px;display: inline-block;/* min-width: 100%; */}
+.pop-toast .link{display:flex;justify-content: space-between;align-items: center;text-align: left;position: relative;padding: 0px 60px 0px 0px;}
+.pop-toast .link .tt{ word-break: break-all; }
+.pop-toast .link .lk{color: #ffffff;position: absolute;right: 0px;}
+.pop-toast .link .lk::after{width: 12px;height: 12px; background-size:14px  auto;font-size:0rem;display:inline-block;vertical-align:middle;content:'';margin: -2px 0px 0px 5px;}
+.pop-toast.wide>.pbd>.pct{min-width: 100%;}
+
+/* quick */
+.quick {display: none; position: fixed; width: 40px; height: 40px; bottom: 30px; right: 30px; background-color: #0673c4; border-radius: 50%; margin-bottom: calc(20px);margin-bottom: calc(20px + env(safe-area-inset-bottom));}
+.quick.active {display: block; border-radius: 50%;}
+.quick button {background: none; display: block; color: #fff; font-size: 20px; border:0; width: 100%; height: 100%;}
+
+
+
+/* 페이지 로딩 */
+.is-loading {overflow : hidden}
+.ui-loading{position:fixed;left:0;right:0;top:0;bottom:0;z-index: 2000;background-color: rgba(0, 0, 0, 0.3);}
+.ui-loading>em{display: block;  position:absolute; top:50%; left:50%; margin-left:-16px; margin-top:-16px; width:50px; height:50px; padding:0px; overflow:hidden; display:block; box-sizing:border-box; }
+.ui-loading>em:after{content:"";display:inline-block; background: url(../img/dotloader.svg) no-repeat; width: 50px; height: 50px; background-size:100% auto;}
+/* .ui-loading>em:after{	animation:loading 1s infinite steps(30);} */
+
+/* 상단 가로 스크롤 */
+.xscroll {position: fixed; left:0; top:0; height: 5px; background-color: burlywood; width: 100%; z-index: 100;}
+.xscroll .scroll {width: 0%; height: 100%; background-color: red;}
+
+/* 
+.is-alert {}
+.ui-alert {white-space: nowrap; position: fixed; left: 0px; right: 0px; top: 0px; bottom: 0; text-align: center; z-index: 1500; background-color: rgba(10,10,10,0.44); outline: none;}
+.ui-alert>.pbd {display: inline-block; max-width: 315px; min-width: 272px; vertical-align: middle; text-align: left; position: relative; white-space: normal; z-index: 200; background-color: #ffffff; border-radius: 10px; overflow: hidden; box-shadow: rgb(0 0 0 / 20%) 2px 2px 7px;} */
+
+/* 팝업 알럿 */
+.ui-alert{white-space:nowrap;position:fixed;left:0px;right:0px;top:0px;bottom:0;text-align:center;z-index:1500;background-color: rgba(10,10,10,0.44);outline:none;}
+.ui-alert>.pbd{display:inline-block;max-width: 315px;min-width: 272px;vertical-align:middle;text-align:left;position:relative;white-space:normal;z-index:200;background-color: #ffffff;border-radius: 10px;overflow: hidden;box-shadow: rgba(0,0,0,0.2) 2px 2px 7px;}
+.ui-alert:after{content:''; width:0; height:100%; display:inline-block; vertical-align:middle;}
+.ui-alert>.pbd>.phd{display:none;padding: 22px 20px 0px 20px;box-sizing:border-box;background-color:#fff;text-align: center;font-size: 18px;font-weight: 700;margin-bottom: -17px;}
+.ui-alert>.pbd>.phd .ptit{font-weight: 700;font-size:16px;}
+.ui-alert>.pbd>.phd.is-tit{display:block;}
+.ui-alert>.pbd>.pct {overflow:auto;padding: 20px 16px 20px 16px;text-align:center;font-size: 14px;color: #494a4b;line-height: 1.5;min-height: 102px;display: flex;justify-content: center;align-items: center;}
+.ui-alert>.pbd>.pct .msg{word-break: break-all;}
+.ui-alert>.pbd>.pct p{}
+.ui-alert>.pbd>.pct .under{}
+.ui-alert>.pbd>.pct b{color: #f0344d;font-weight: 700;}
+.ui-alert>.pbd>.pbt{padding: 0px 16px 16px 16px;box-sizing:border-box;text-align:center;display: flex;}
+.ui-alert>.pbd>.pbt .btn {width:100%;border-radius: 4px;border: #E9E9E9 0px solid;color: #ffffff;font-size: 14px;height: 40px;font-weight: 400;background: #1c4196;}
+.ui-alert>.pbd>.pbt .btn.btn-confirm:active{border-color: #0673c4;background-color: #0673c4;}
+.ui-alert>.pbd>.pbt .btn:disabled{border-color:#cccedb; background-color:#cccedb;}
+.ui-alert>.pbd>.btm {display: flex; justify-content: space-between; align-items: center;}
+.ui-alert>.pbd>.btm button{width: 100%;}
+.ui-alert>.pbd .btn-close{width: 24px;height: 24px;position:absolute;right: 10px;top: 10px;text-indent:-9999px;overflow:hidden;background: url(../img/common/btn_popup_close@2x.png) no-repeat center;background-size: 20px auto;/* display: none; */}
+
+
+.ui-select {position: relative;}
+.ui-select button { display: block; text-align: left; background-color: transparent; border:1px solid #ccc; color:#fff; width: 100%; height: 40px; padding: 10px; font-size: 12px}
+
+.ui-select .item {position: absolute; bottom:39px; left:0; right:0;}
+/* .ui-select .item li:first-of-type {border-top:0;} */
+.ui-select .item li {border-top:1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; padding: 10px; font-size: 12px; color:#fff;}
+
+
+
+/* accordion */
+.accordion { color:#fff; margin-bottom: 30px;}
+.accordion ul li {}
+.accordion ul li .tit {display: block; cursor: pointer; background-color: #fff; border-bottom: 1px solid #ccc; padding: 10px;}
+.accordion ul li .item {display: none;  background-color: #0673c4;padding: 10px;}
+
+
+
+/* tab menu */
+.tab-area {margin-bottom: 30px;}
+.tab-area ul {display: flex; justify-content: space-between;}
+.tab-area li:first-of-type {border-left: 0;}
+.tab-area li {width: 100%; list-style: none; border-left: 1px solid #fff;}
+.tab-area li.active a {background-color: orange;}
+.tab-area li a {display: block; text-align: center; background-color: #ccc; padding: 5px;}
+.tab-area .content > div:first-of-type {display: block;}
+.tab-area .content > div {display: none; background-color: dimgray; color:#fff;}
+.tab-area.t2 li.active a {background-color: olive;} 
+
+
+@keyframes loading {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+@-webkit-keyframes loading {
+    from { -webkit-transform: rotate(0deg); } 
+    to   { -webkit-transform: rotate(360deg); }
+}
+
